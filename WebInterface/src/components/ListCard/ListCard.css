@@ -1,0 +1,45 @@
+.list-card-item {
+    margin-top: 15px;
+    display: flex;
+    padding: 8px;
+    font-size: 48pt;
+    width: 100%;
+}
+
+.icon-button {
+    font-size: 24pt;
+}
+
+.items-list {
+    width: 100%;
+    background-color: white;
+}
+
+.comments-list {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    overflow: auto;
+    max-height: 250px;
+    height: 250px;
+}
+
+.comments-list ul {
+    padding: 0;
+}
+
+.items-box {
+    background-color: black;
+    border: 1px dashed grey;
+}
+
+.comments-box {
+    background-color: black;
+    border: 1px dashed grey;
+}
+
+.comment-textfield {
+    background-color: #fff;
+    width: 500px;
+    max-width: 100%;
+}

@@ -1,0 +1,20 @@
+.register-form-box {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-avatar {
+    margin: 8px;
+    background-color: #9c27b0;
+}
+
+.register-submit-button {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+#firstname {
+    justify-content: center;
+}

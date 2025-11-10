@@ -1,0 +1,131 @@
+.div {
+  margin: 0;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  align-items: flex-start;
+  background-color: aqua;
+  min-height: 5vh;
+}
+
+.top-grid .tg-header {
+  grid-column: span 6;
+  justify-self: self-start;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 44pt;
+  cursor: pointer;
+  background-color: #C9B896;
+}
+
+.top-grid .tg-header:hover {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+.top-grid .tg-contact {
+  grid-column: span 6;
+  justify-self: flex-end;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18pt;
+  white-space: nowrap;
+}
+
+.bottom-grid  {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.bottom-grid .middle-tabs {
+  grid-column: span 12;
+}
+
+.bottom-grid .middle-tabs > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-grid .middle-tabs .hamburger-content > a {
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bottom-grid .middle-tabs .hamburger-content > a:hover {
+  animation: zoom 1s ease-in-out infinite;
+}
+
+.dropdown-button,
+.hamburger-button {
+    display: none;
+}
+
+.middle-tabs .dropdown-content,
+.end-tabs .hamburger-content {
+    display: block;
+}
+
+/* Keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* starting position */
+  }
+  50% {
+    transform: translateY(-3px); /* jumps up 10 pixels */
+  }
+}
+
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1); /* normal size */
+  }
+  50% {
+    transform: scale(1.2); /* 20% bigger! */
+  }
+}
+
+
+/* Mobile styles */
+@media screen and (max-width: 960px) {
+    .bottom-grid .middle-tabs .hamburger-content {
+      display: none;
+    }
+
+    .bottom-grid .middle-tabs {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .hamburger-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 6px; /* space between the lines */
+    }
+
+    .hamburger-button span {
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      display: block;
+      transition: all 0.3s ease; /* makes it animate smoothly */
+    }
+
+    /* When it's open, make an X */
+    .hamburger-button .open span:nth-child(1) {
+      transform: rotate(45deg) translate(2px, 2px);
+    }
+
+    .hamburger-button .open span:nth-child(2) {
+      opacity: 0; /* middle line disappears */
+    }
+
+    .hamburger-button .open span:nth-child(3) {
+      transform: rotate(-45deg) translate(2px, -2px);
+    }
+}

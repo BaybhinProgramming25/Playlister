@@ -1,0 +1,30 @@
+.login-container {
+    height: 100vh;
+}
+
+.login-image-side {
+    background-image: url(https://source.unsplash.com/random);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form-box {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-avatar {
+    margin: 8px;
+    background-color: #9c27b0;
+}
+
+.login-submit-button {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
