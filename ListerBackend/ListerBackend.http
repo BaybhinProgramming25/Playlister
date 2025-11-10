@@ -1,0 +1,6 @@
+@ListerBackend_HostAddress = http://localhost:5144
+
+GET {{ListerBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
