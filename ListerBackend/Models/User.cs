@@ -1,14 +1,21 @@
-using Microsoft.AspNetCore.Components.Forms;
-
-namespace ListerBackend.Models;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 public class User
 {
-    public int Id { get; set; }
-    public required string Name { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public required string Id { get; set; }
 
+    [BsonElement("firstName")]
+    public required string FirstName { get; set; }
+
+    [BsonElement("lastName")]
+    public required string LastName { get; set; }
+
+    [BsonElement("email")]
     public required string Email { get; set; }
 
-    public DateTime UserCreatedAT { get; set; }
-    
+    [BsonElement("passwordHash")]
+    public required string PasswordHash { get; set; }
 }
