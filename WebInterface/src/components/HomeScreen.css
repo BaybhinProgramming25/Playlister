@@ -1,0 +1,272 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 100%);
+  padding: 60px 20px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* The home box/card */
+.home-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+/* Hero section with navigation buttons */
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  background-color: #16213e;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* List selector heading - navigation bar */
+#list-selector-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#home-button,
+#group-button,
+#user-button,
+#community-button,
+#sort-button {
+  color: #8080ff;
+  transition: all 0.3s ease;
+}
+
+#home-button:hover,
+#group-button:hover,
+#user-button:hover,
+#community-button:hover,
+#sort-button:hover {
+  background-color: rgba(108, 99, 255, 0.1);
+  transform: scale(1.1);
+}
+
+#search {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #e4e4ff;
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+#search:hover {
+  border-color: rgba(108, 99, 255, 0.5);
+}
+
+#search::placeholder {
+  color: #9d9dc7;
+}
+
+#sort-text {
+  color: #8080ff;
+  font-weight: 600;
+}
+
+/* Feature section with cards */
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background-color: #16213e;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.3);
+}
+
+.feature-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-image img {
+  transform: scale(1.05);
+}
+
+.feature-card h2 {
+  color: #8080ff;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.feature-card p {
+  color: #c4c4dd;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.feature-card ul li {
+  color: #c4c4dd;
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.feature-card ul li::before {
+  content: "✓";
+  color: #6c63ff;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Call to action section */
+.cta-section {
+  text-align: center;
+  padding: 50px 40px;
+  background-color: #16213e;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.cta-section h2 {
+  color: #e4e4ff;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  color: #9d9dc7;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  #list-selector-heading {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #search {
+    width: 80% !important;
+    max-width: 80% !important;
+  }
+
+  .feature-card {
+    padding: 30px;
+  }
+
+  .feature-card h2 {
+    font-size: 24px;
+  }
+
+  .feature-image {
+    height: 250px;
+  }
+
+  .cta-section {
+    padding: 40px 30px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 40px 15px;
+  }
+
+  .hero-section {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+  }
+
+  #list-selector-heading {
+    gap: 12px;
+  }
+
+  #search {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #sort-text {
+    font-size: 14px;
+  }
+
+  .feature-section {
+    gap: 30px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .feature-card h2 {
+    font-size: 22px;
+  }
+
+  .feature-card p,
+  .feature-card ul li {
+    font-size: 15px;
+  }
+
+  .feature-image {
+    height: 200px;
+  }
+
+  .cta-section {
+    padding: 30px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 24px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}
